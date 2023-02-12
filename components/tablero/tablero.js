@@ -16,7 +16,7 @@ const Victory_Comb = [
   [2, 4, 6],
 ];
 
-export default function tablero(props) {
+export default function Tablero(props) {
   //STATE TO RETURN TO MAIN SCREEN
   const [back, setBack] = useState(false);
 

@@ -2,7 +2,7 @@ import Tablero from "components/tablero/tablero";
 import style from "components/prinicpal/principal.module.css";
 import { useState, useRef } from "react";
 
-export default function principal() {
+export default function Principal() {
   const [begin, setBegin] = useState(false);
   const j1 = useRef();
   const j2 = useRef();
