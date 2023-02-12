@@ -3,11 +3,11 @@ import style from "components/prinicpal/principal.module.css";
 import { useState, useRef } from "react";
 
 export default function principal() {
-  const [Begin, setBegin] = useState(false);
+  const [begin, setBegin] = useState(false);
   const j1 = useRef();
   const j2 = useRef();
 
-  if (!Begin) {
+  if (!begin) {
     return (
       <div className={style.gridContainer}>
         <div className={style.h1}>

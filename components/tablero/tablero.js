@@ -18,7 +18,7 @@ const Victory_Comb = [
 
 export default function tablero(props) {
   //STATE TO RETURN TO MAIN SCREEN
-  const [Back, setBack] = useState(false);
+  const [back, setBack] = useState(false);
 
   //STATE TO KNOW WHEN IS THE TURN OF PLAYER X
   const [xTurn, setXTurn] = useState(true);
@@ -30,7 +30,7 @@ export default function tablero(props) {
   const [winningComb, setwinningComb] = useState([]);
 
   //CONTENT OF THE BOARD INITIALIZE IN ""
-  const [DataBoard, setDataBoard] = useState({
+  const [dataBoard, setDataBoard] = useState({
     0: "",
     1: "",
     2: "",
@@ -49,21 +49,21 @@ export default function tablero(props) {
   useEffect(() => {
     checkWinner();
     checkDraw();
-  }, [DataBoard]);
+  }, [dataBoard]);
 
   // UPDATE FUNCTION TO UPDATE THE DATE IN THE BOARD CHECKING IF THE  EMPTY POSITIONS
   function updateBoardData(num) {
-    if (!DataBoard[num] && !won) {
+    if (!dataBoard[num] && !won) {
       //CHECKS IF X TURN AND IS A EMPTY POSITION UPDATE DE ARRAY OF DATA BOARD WITH DE POSITION AND PLAYER X OR O
       let value = xTurn === true ? "X" : "O";
-      setDataBoard({ ...DataBoard, [num]: value });
+      setDataBoard({ ...dataBoard, [num]: value });
       setXTurn(!xTurn);
     }
   }
 
   //FUNCTION THAR CHECKS IF DRAW HAPPENED CHECK IS A BOOLEAN RETURN TRUE IF NOT VICTOY_COMB HAPPENDED
   function checkDraw() {
-    let check = Object.keys(DataBoard).every((el) => DataBoard[el]);
+    let check = Object.keys(dataBoard).every((el) => dataBoard[el]);
     setIsDraw(check);
     if (check) setModalTitle("Empate!!!");
   }
@@ -75,9 +75,9 @@ export default function tablero(props) {
       const [a, b, c] = el;
 
       if (
-        DataBoard[a] &&
-        DataBoard[a] === DataBoard[b] &&
-        DataBoard[a] === DataBoard[c]
+        dataBoard[a] &&
+        dataBoard[a] === dataBoard[b] &&
+        dataBoard[a] === dataBoard[c]
       ) {
         setWon(true);
         setwinningComb([a, b, c]);
@@ -108,7 +108,7 @@ export default function tablero(props) {
     setIsDraw(false);
     setModalTitle("");
   }
-  if (!Back) {
+  if (!back) {
     return (
       <div className={style.main}>
         <Head>
@@ -156,7 +156,7 @@ export default function tablero(props) {
                     winningComb.includes(idx) ? "highlight" : ""
                   }`}
                 >
-                  {DataBoard[idx]}
+                  {dataBoard[idx]}
                 </div>
               );
             })}
