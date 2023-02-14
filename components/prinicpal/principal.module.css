@@ -231,7 +231,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(247, 0, 0);
+    color: rgb(12, 11, 11);
 
     font-size: 4rem;
   }
@@ -292,21 +292,21 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1199px) and (orientation: landscape) {
   .h1 {
     grid-area: titulo;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(247, 0, 0);
+    color: rgb(12, 11, 11);
 
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .gridSeleccion {
     grid-area: seleccion;
-    height: 60%;
-    width: 450px;
+    height: 100%;
+    width: 700px;
     background: rgba(193, 187, 214, 0.445);
     border-radius: 5%;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -317,7 +317,7 @@
 
   .h2 {
     color: BLACK;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
   }
   .SeleccionNombres {
@@ -346,7 +346,7 @@
 
   .TituloJugador {
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
   }
   .TextoNombre {
@@ -354,7 +354,73 @@
     width: 80%;
     height: 35px;
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+  .h1 {
+    grid-area: titulo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 0, 0);
+    font-size: 1.5rem;
+  }
+
+  .gridSeleccion {
+    grid-area: seleccion;
+    height: 100%;
+    width: 600px;
+    background: rgba(193, 187, 214, 0.445);
+    border-radius: 5%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .h2 {
+    color: BLACK;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .SeleccionNombres {
+    display: grid;
+    margin: 10px;
+    height: 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "jugador1   jugador2";
+  }
+
+  .divSeleccionJugador1 {
+    grid-area: jugador1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 30%;
+    place-items: center;
+  }
+  .divSeleccionJugador2 {
+    grid-area: jugador2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 30%;
+    place-items: center;
+  }
+
+  .TituloJugador {
+    color: black;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .TextoNombre {
+    resize: none;
+    width: 80%;
+    height: 35px;
+    text-align: center;
+    font-size: 10px;
     text-transform: uppercase;
   }
 }
@@ -422,6 +488,72 @@
     height: 35px;
     text-align: center;
     font-size: 13px;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 320px) {
+  .h1 {
+    grid-area: titulo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 0, 0);
+
+    font-size: 2.5rem;
+  }
+
+  .gridSeleccion {
+    grid-area: seleccion;
+    height: 60%;
+    width: 250px;
+    background: rgba(193, 187, 214, 0.445);
+    border-radius: 5%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .h2 {
+    color: BLACK;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .SeleccionNombres {
+    display: grid;
+    margin: 10px;
+    height: 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "jugador1   jugador2";
+  }
+
+  .divSeleccionJugador1 {
+    grid-area: jugador1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 30%;
+    place-items: center;
+  }
+  .divSeleccionJugador2 {
+    grid-area: jugador2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 30%;
+    place-items: center;
+  }
+
+  .TituloJugador {
+    color: black;
+    font-size: 0.6rem;
+    text-align: center;
+  }
+  .TextoNombre {
+    resize: none;
+    width: 80%;
+    height: 35px;
+    text-align: center;
+    font-size: 8px;
     text-transform: uppercase;
   }
 }

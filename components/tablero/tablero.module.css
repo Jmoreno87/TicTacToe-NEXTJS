@@ -97,7 +97,10 @@
   }
 
   .game__menu {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
     font-size: 2rem;
     font-weight: 800;
     color: rgb(247, 0, 0);
@@ -190,6 +193,46 @@
   }
 }
 
+@media (min-width: 1023px) and (max-width: 1200px) and (orientation: landscape) {
+  .titulo {
+    grid-area: titulo;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 100%;
+    grid-template-areas: "volver tictactitulo";
+  }
+  .volver {
+    grid-area: volver;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .ticTac {
+    grid-area: tictactitulo;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 0, 0);
+  }
+
+  .game__menu {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(247, 0, 0);
+  }
+
+  .boton {
+    width: 460px;
+    height: 100px;
+    border-radius: 10%;
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 1023px) {
   .titulo {
     grid-area: titulo;
@@ -227,6 +270,47 @@
     height: 80px;
     border-radius: 10%;
     font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  .titulo {
+    grid-area: titulo;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 100%;
+    grid-template-areas: "volver tictactitulo";
+  }
+  .volver {
+    grid-area: volver;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .ticTac {
+    grid-area: tictactitulo;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 0, 0);
+  }
+
+  .game__menu {
+    text-align: center;
+    height: 70px;
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(247, 0, 0);
+  }
+
+  .boton {
+    width: 240px;
+    height: 80px;
+    border-radius: 10%;
+    font-size: 20px;
   }
 }
 
@@ -270,6 +354,45 @@
   }
 }
 
+@media (min-width: 480px) and (max-width: 768px) and (orientation: landscape) {
+  .titulo {
+    grid-area: titulo;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 100%;
+    grid-template-areas: "volver tictactitulo";
+  }
+  .volver {
+    grid-area: volver;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .ticTac {
+    grid-area: tictactitulo;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 0, 0);
+  }
+
+  .game__menu {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    color: rgb(247, 0, 0);
+  }
+
+  .boton {
+    width: 240px;
+    height: 80px;
+    border-radius: 10%;
+    font-size: 20px;
+  }
+}
 @media (max-width: 480px) {
   .titulo {
     grid-area: titulo;
